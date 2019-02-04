@@ -53,7 +53,6 @@ hbs.registerHelper('ptag',(num, messagePassed)=>{
 })
 
 hbs.registerHelper('genGrid', (numba)=>{
-    console.log("your number: " + numba );
     var  gen = "<table><tbody>";
     for(var i = 0; i < numba; i++)
     {
@@ -68,7 +67,6 @@ hbs.registerHelper('genGrid', (numba)=>{
         gen += "</tr>";        
     }
     gen += "</tbody></table>";
-    console.log(gen);
     return gen;
 });
 
