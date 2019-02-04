@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<style>
+    body {
+        background-image: Url("images/resultBG.png");
+
+}
+</style>
+<html lang="en">
+<head>
+    {{>header}}
+    {{>bootstrap}}
+
+    <title>Form it up</title>
+</head>
+<body>
+    <div class="container">
+    {{>nav}}
+            <div style="padding-left: 7%; padding-right: 7%;">                
+                <div class="row">  
+                <h3>You requested a {{numba}} by {{numba}} grid:</h3>
+                <label></label>
+                {{!-- <ul style="list-style: none">
+                    <li><b><label>Number: {{numba}}</label></b></li>                    
+                </ul> --}}
+                </div>   
+                <div class="row">
+                    {{{genGrid numba}}}
+                </div>       
+                <br />
+            </div>               
+    </div>
+    
+    <div id="footer">{{>footer}}</div>
+</body>
+</html>
+
+
+

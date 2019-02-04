@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<style>
+    body {
+        background-image: Url("images/bg1.jpg");
+        background-repeat: no-repeat;
+        background-size: auto;
+}
+</style>
+<html lang="en">
+<head>
+    {{>header}}
+    {{>bootstrap}}
+
+    <title>Number me</title>
+</head>
+<body>
+    <div class="container">
+    {{>nav}}
+    
+    <div class="col-lg-1"></div>
+    <div class="col-lg-10">
+        <div class="" style="text-align: center"><h1>Grid it up!</h1></div>
+        <br>
+
+        <div class="row">  
+            
+            <div class="container">                
+            <form style="padding-left:150px" action="/results" method="POST">
+                <label class="col-md-4">Please select the number of columns desired:</label>
+                <br/>
+                <select name="ddNumba" >                    
+                    <option value = "3">3</option>
+                    <option value = "4">4</option>
+                    <option value = "5">5</option>
+                    <option value = "10">10</option>
+                    <option value = "20">20</option>
+                </select>
+                
+                <div class="row">
+                <br>
+                <br>
+                <br>
+                
+                <div class="col-md-5">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+
+                </div>
+            </form>
+            </div>          
+        </div>        
+    </div>
+    </div>
+    
+    <div class="col-md-3"></div>
+    <br/>
+    <div id="footer">
+    {{>footer}}    
+    </div>
+</body>
+</html>
+
+
+
