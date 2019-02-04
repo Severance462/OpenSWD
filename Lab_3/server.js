@@ -6,6 +6,9 @@ var hbs = require('hbs');
 var app = express();
 app.set('view engine', 'hbs');
 
+var http = require("http");
+var url = require("url");
+
 app.use(express.urlencoded());
 //including the partials folder
 hbs.registerPartials(__dirname + '/views/partials')
@@ -15,9 +18,14 @@ hbs.registerHelper('today', ()=>{
     return date;
 });
 
-hbs.registerHelper('error404',()=>{
+hbs.registerHelper('error404',(req)=>{
     var divNum = Math.floor(Math.random() * 50) + 20;
-    var gen;    
+    var gen;        
+    // var path = url.parse(req.path).pathname;
+    // console.log(path);
+    // var url_parts = url.parse(req.url);
+    // console.log(req.url);
+    // console.log(url_parts.pathname);
     gen = "<h1>It's not there, brah!</h1>";
 
     for(var i = 0; i < divNum; i++)
@@ -48,7 +56,7 @@ hbs.registerHelper('ptag',(num, messagePassed)=>{
         msg+=`<p>${messagePassed}</p><br>`;
     }
     //return msg;
-    //need this safeString function if you have html elements in your string
+    //need this safeString function if you have html elements in your string but not really
     return new hbs.handlebars.SafeString(msg);
 })
 
@@ -61,7 +69,7 @@ hbs.registerHelper('genGrid', (numba)=>{
         for(var j = 0; j < numba; j++)
         {
             color = ((1<<24)*Math.random()|0).toString(16);                
-            gen += "<td style='background-color:#" + color + "; width='200px'>" + color + "<br /> <span style='color:#ffffff'>" + color + "</span></td>"
+            gen += "<td style='background-color:#" + color + "';>" + color + "<br /> <span style='color:#ffffff'>" + color + "</span></td>"
             // gen += "<td style='border: 1px solid black; background-color:#" + color + "'><p style='text-align:center;'> " + color + " </p><p style='color:white; text-align:center;'>"+ color + "</p></td>";
         }
         gen += "</tr>";        
