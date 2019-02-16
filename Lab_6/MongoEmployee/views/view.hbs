@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<style>
+    body {
+        background-image: Url("images/bg1.jpg");
+
+}
+</style>
+<html lang="en">
+<head>
+    {{>header}}
+    {{>bootstrap}}
+
+    <title>Form it up</title>
+</head>
+<body>
+    <div class="container">
+    {{>nav}}
+    
+    <div class="col-lg-1"></div>
+    <div class="col-lg-10">
+        <div class="" style="text-align: center"><h1>Results it out!</h1></div>
+        <br>
+            <div class="container">                
+                <div class="row">  
+
+                {{!-- <ul style="list-style: none">
+                    <li><b><label>Number: {{numba}}</label></b></li>                    
+                </ul> --}}
+                </div>   
+                <div class="row">
+                    {{{gen}}}
+                </div>       
+            </div>               
+    </div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    {{>footer}}    
+</body>
+</html>
+
+
+
