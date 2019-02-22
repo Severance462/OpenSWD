@@ -1,0 +1,86 @@
+!<!DOCTYPE html>
+<style>
+    body {
+        background-image: Url("images/bg1.jpg");
+        background-repeat: no-repeat;
+        background-size: auto;
+}
+</style>
+<html lang="en">
+<head>
+    {{>header}}
+    {{>bootstrap}}
+
+    <title>Update Employee schtuff</title>
+</head>
+<body>
+    <div class="container">
+    {{>nav}}
+    
+    <div class="col-lg-1"></div>
+    <div class="col-lg-10">
+        <div class="" style="text-align: center"><h1>Update Employee Info</h1></div>
+        <br>
+        <div class="row">              
+            <div class="container">                
+            <form style="padding-left:150px" action="/view" method="POST">
+                <div class="row">
+                    <label class="col-md-3" for="firstName">First Name</label>
+                    <input class="col-md-3" type="text" name="firstName">
+                </div>
+                <br />
+                <div class="row">
+                    <label class="col-md-3" for="lastName">Last  Name</label>
+                    <input class="col-md-3" type="text" name="lastName">
+                </div>
+                <br />
+                <div class="row">          
+                    <label class="col-md-3" for="ddDepartment">Department</label>
+                    <select style="width: 255px" name="ddDepartment">
+                        <option value = "Admin">Administrative</option>
+                        <option value = "CS">Customer Service</option>
+                        <option value = "Dungeon">Dungeon</option>                        
+                    </select>
+                </div>
+                <br />
+                <div class="row">
+                    <label class="col-md-3" for="startDate">Start Date</label>
+                    <input class="col-md-3" type="date" name="startDate">
+                </div>
+                <br />
+                <div class="row">
+                    <label class="col-md-3" for="jobTitle">Job Title</label>
+                    <input class="col-md-3" type="text" name="jobTitle">
+                </div>
+                <br />
+                <div class="row">
+                    <label class="col-md-3" for="salary">Salary</label>
+                    <input class="col-md-3" type="text" name="salary">
+                <br />
+
+                <div class="row">
+                <br>
+                <br>
+                <br>
+                <div class="col-md-1">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+                <div class="col-md-4">
+                </div>
+
+                <div class="col-md-1">
+                    <button type="reset" style="width: 75px" class="btn btn-warning">Clear</button>
+                </div>
+                </div>
+            </form>
+            </div>          
+        </div>        
+    </div>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+    {{>footer}}    
+</body>
+</html>
+
+
+
