@@ -12,11 +12,11 @@
     <title>Form it up</title>
 </head>
 <body>
-    <div class="container">
     {{>nav}}
+    <div class="container">
     
-    <div class="col-lg-1"></div>
-    <div class="col-lg-10">
+        
+    <div class="col-lg-12">
         <div class="" style="text-align: center"><h1>Records</h1></div>
         <br>
             <div class="container">                
@@ -26,10 +26,11 @@
                     <li><b><label>Number: {{numba}}</label></b></li>                    
                 </ul> --}}
                 </div>   
-                <div class="row">
-                    {{{genAll}}}
+                <div class="row">                    
+                    {{{gen}}}
                 </div>       
             </div>               
+        </div>
     </div>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     {{>footer}}    
